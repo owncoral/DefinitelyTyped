@@ -291,6 +291,7 @@ declare namespace HelloSign {
         download<Options extends FilesOptions | undefined>(
             requestId: string,
             options?: Options,
+            callback?: any,
         ): Promise<
             Options extends { file_type: 'pdf'; get_url: true }
                 ? { file_url: string; expires_at: Date } & BaseResponse
